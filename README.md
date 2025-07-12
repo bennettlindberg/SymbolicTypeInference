@@ -158,24 +158,31 @@ Benchmark on prime sieve:
 - [Rosette](https://docs.racket-lang.org/rosette-guide/) symbolic evaluation framework
 - Z3 SMT solver (included with Rosette)
 
-## Architecture
+## Repository Structure
 
 ```
 src/
-├── hijack/           # Racket syntax overrides for symbolic evaluation
-│   ├── basic.rkt     # Basic operations (if, arithmetic, etc.)
-│   ├── call.rkt      # Function calls and application
-│   ├── define.rkt    # Variable and function definitions
-│   ├── struct.rkt    # Struct definitions and operations
-│   └── hijack.rkt    # Main hijack module
+├── hijack/                 # Racket syntax overrides for symbolic evaluation
+│   ├── basic.rkt           # Basic operations (if, arithmetic, etc.)
+│   ├── call.rkt            # Function calls and application
+│   ├── define.rkt          # Variable and function definitions
+│   ├── struct.rkt          # Struct definitions and operations
+│   └── hijack.rkt          # Main hijack module
 ├── solver/
-│   └── solve.rkt     # SMT solver integration and type resolution
+│   └── solve.rkt           # SMT solver integration and type resolution
 ├── util/
-│   ├── value.rkt     # Value representation and manipulation
-│   ├── root.rkt      # Root symbol management
-│   ├── primitive.rkt # Symbolic primitive creation
-│   └── literal.rkt   # Literal value conversion
+│   ├── value.rkt           # Value representation and manipulation
+│   ├── root.rkt            # Root symbol management
+│   ├── primitive.rkt       # Symbolic primitive creation
+│   └── literal.rkt         # Literal value conversion
 └── test/
-    ├── unit.rkt      # Unit tests
-    └── sieve.rkt     # Prime sieve benchmark
+    ├── unit.rkt            # Unit tests
+    └── sieve.rkt           # Prime sieve benchmark
+
+docs/
+├── ResearchPoster.pdf      # Research poster summarizing the project
+└── ResearchProposal.pdf    # Research proposal document and related literature
+
+README.md                   # Project documentation
+usage-example.rkt           # Example usage script
 ```
